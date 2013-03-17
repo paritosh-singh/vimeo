@@ -21,17 +21,23 @@ All dependencies are already included in project
 
 ## Loading schema in database
 For loading schema in database run the command
->>> python manage.py syncdb
+```
+python manage.py syncdb
+```
 
 ## Crawl vimeo users to your Mysql DB
 For crawling vimeo users run the command
->>> python manage.py fetch_vimeo_users
+```
+python manage.py fetch_vimeo_users
+```
 This task fetches 5000 vimeo users and take 2.5 hours (approx). Incase you want to fetch less users change "USERS_LIMIT"
 in settings.py(vimeo_assignment/settings.py).
 
 ## Running the application
 * For running the application run the command
->>> python manage.py runserver
+```
+python manage.py runserver
+```
 * Go to your browser and hit the url "http://127.0.0.1:8000"
 * Now enter your search term and press enter.
 * Also to apply filters, click on corresponding filters.
