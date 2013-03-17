@@ -6,7 +6,7 @@ body{font-family:Times New Roman;}
 
 .content{width:960px; margin:0 auto; margin-top:44px;}
 
-/*.navigation{margin-left:81px;}*/
+.aligner > a{position: absolute; top:12px; left:40px;}
 
 .clearfix:after {
     content: " "; /* Older browser do not support empty content */
