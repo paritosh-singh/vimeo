@@ -37,13 +37,25 @@
                 <a href="{{ user.url }}" target="_blank">{{ user.url }}</a>
             </div>
             <div class="paying">
-                {{ user.paying }}
+                {% if user.paying %}
+                    Yes
+                {% else %}
+                    No
+                {% endif %}
             </div>
             <div class="uploaded">
-                {{ user.uploaded }}
+                {% if user.uploaded %}
+                    Yes
+                {% else %}
+                    No
+                {% endif %}
             </div>
             <div class="staff-pick">
-                {{ user.staffpick }}
+                {% if user.staffpick %}
+                    Yes
+                {% else %}
+                    No
+                {% endif %}
             </div>
         </div>
     {% endfor %}
