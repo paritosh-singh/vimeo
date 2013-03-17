@@ -1,0 +1,58 @@
+{% if users|length %}
+<div class="search_count">
+    <span>Showing <strong>{{ users|length }}</strong> of <strong>{{ count }}</strong> results found</span>
+</div>
+<div class="table">
+
+    <div class="row clearfix head">
+        <div class="name">
+            Name
+        </div>
+        <div class="username">
+            Username
+        </div>
+        <div class="url">
+            Vimeo Url
+        </div>
+        <div class="paying">
+            Paying
+        </div>
+        <div class="uploaded">
+            Uploaded
+        </div>
+        <div class="staff-pick">
+            Staff Pick
+        </div>
+    </div>
+
+    {% for user in users %}
+        <div class="row clearfix">
+            <div class="name">
+                {{ user.name }}
+            </div>
+            <div class="username">
+                {{ user.username }}
+            </div>
+            <div class="url">
+                {{ user.url }}
+            </div>
+            <div class="paying">
+                {{ user.paying }}
+            </div>
+            <div class="uploaded">
+                {{ user.uploaded }}
+            </div>
+            <div class="staff-pick">
+                {{ user.staffpick }}
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+{% else %}
+    {% if search_term %}
+        <span class="no-results">Sorry, no results for "{{ search_term }}" found</span>
+    {% else %}
+        <span class="no-search">Please enter a search term</span>
+    {% endif %}
+{% endif %}

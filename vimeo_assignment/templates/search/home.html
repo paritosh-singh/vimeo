@@ -1,0 +1,27 @@
+{%  extends 'base.html'  %}
+{% block content %}
+    <div class="navigation clearfix">
+        <div class="search">
+            <form action="{% url 'ajax' %}" method="get">
+                <input type="text" name="search"/>
+                <input type="submit" value="search"/>
+            </form>
+        </div>
+        <div class="filter">
+            <span>Filters: </span>
+            <a href="all">All</a>
+            |
+            <a href="paying">Paying</a>
+            |
+            <a href="uploaded">Uploaded</a>
+            |
+            <a href="staffpick">Staff Pick</a>
+        </div>
+    </div>
+    <div class="results">
+        {% include "search/results.html" with users=users count=count search_term=search_term %}
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="{{STATIC_URL}}js/search.js"></script>
+{% endblock %}
