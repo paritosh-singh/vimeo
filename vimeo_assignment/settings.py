@@ -12,10 +12,10 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'DB_NAME',                      # Or path to database file if using sqlite3.
+        'NAME': 'vimeo',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'MYSQL_USERNAME',
-        'PASSWORD': 'MYSQL_PASSWORD',
+        'USER': 'root',
+        'PASSWORD': 'root',
         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
@@ -157,11 +157,12 @@ LOGGING = {
 }
 
 
-APP_KEY = u'157b1cb755f3d88d002d2388081b857655c335ed'
-APP_SECRET = u'ae9155260e08cbf551d738fcd61c2a5c846ef2cb'
-AUTH_TOKEN = u'eadac1dde4e184cec2fc2edc661d24a6'
-AUTH_SECRET = u'3c6fd524143de91543a3772c300c83d10f011ddc'
+######################## VIMEO SETTINGS #####################
+APP_KEY = u'd334cb57b15c7d057634db3de0f6760558880c30'
+APP_SECRET = u'0238fbd49412b2dbdde1c033e45bf5f61d0029ad'
+AUTH_TOKEN = u'19a0cb24636aaa7a660e2d1d345ddd78'
+AUTH_SECRET = u'4309e59eea84ba642a3505d5cd100bc92547ed82'
 VIMEO_URL = 'https://vimeo.com/api/rest/v2'
 
-MAX_USERS_COUNT = 100000
 USERS_LIMIT = 5000
+###############################################################

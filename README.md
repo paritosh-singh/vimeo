@@ -13,7 +13,7 @@ All dependencies are already included in project
 
 
 ## Project Setup
-* Clone the project from git.
+* Clone the project from git. (use command: '''git clone git@github.com:paritosh-singh/vimeo.git''')
 * Open your terminal.
 * Goto project directory.
 * Create your mysql database.
